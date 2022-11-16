@@ -145,7 +145,7 @@ class Scrapping :
 
 
 # Input data
-with open("/data/Documents/ING3/DevOps/input.json", "r") as f :
+with open("input.json", "r") as f :
     video_id = json.load(f)["videos_id"]
     
 output = []
@@ -155,5 +155,5 @@ for ide in video_id :
     print(data)
     output.append(data)
 
-with open("/data/Documents/ING3/DevOps/output.json", "w") as f :
+with open("output.json", "w") as f :
     f.write(json.dumps(output, indent=4))
